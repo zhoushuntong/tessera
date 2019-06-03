@@ -28,13 +28,6 @@ public interface EncryptedTransactionDAO {
      */
     Optional<EncryptedTransaction> retrieveByHash(MessageHash hash);
 
-    /**
-     * Retrieves a list of all transactions stored in the database
-     *
-     * @return The list of all rows in the database
-     */
-    List<EncryptedTransaction> retrieveAllTransactions();
-
     List<EncryptedTransaction> retrieveTransactions(int offset, int maxResult);
 
     long transactionCount();

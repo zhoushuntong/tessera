@@ -49,12 +49,6 @@ public class EncryptedTransactionDAOImpl implements EncryptedTransactionDAO {
     }
 
     @Override
-    public List<EncryptedTransaction> retrieveAllTransactions() {
-
-        return retrieveTransactions(0, Integer.MAX_VALUE);
-    }
-
-    @Override
     public List<EncryptedTransaction> retrieveTransactions(int offset, int maxResult) {
         LOGGER.info("Fetching all EncryptedTransaction database rows");
 
