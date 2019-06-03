@@ -35,11 +35,15 @@ public interface EncryptedTransactionDAO {
      */
     List<EncryptedTransaction> retrieveAllTransactions();
 
+    List<EncryptedTransaction> retrieveTransactions(int offset, int maxResult);
+
+    long transactionCount();
+
     /**
      * Deletes a transaction that has the given hash as its digest
      *
      * @param hash The hash of the message to be deleted
-     * @throws javax.persistence.EntityNotFoundException 
+     * @throws javax.persistence.EntityNotFoundException
      */
     void delete(MessageHash hash);
 
